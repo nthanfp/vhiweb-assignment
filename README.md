@@ -11,9 +11,8 @@ Ini adalah implementasi sistem backend sederhana untuk **E-Procurement** menggun
 - **Laravel 12**
 - **PHP 8.2**
 - **Sanctum** – Autentikasi berbasis token
-- **L5-Swagger** – Dokumentasi API otomatis
+- **L5-Swagger** – Dokumentasi API
 - **MySQL** – Database
-- **Laravel Queue** – Untuk proses impor CSV besar (opsional untuk pengembangan lebih lanjut)
 
 ---
 
