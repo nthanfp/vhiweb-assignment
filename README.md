@@ -57,25 +57,6 @@ Ini adalah implementasi sistem backend sederhana untuk **E-Procurement** menggun
 
 Swagger dapat diakses melalui endpoint: /api/documentation
 
-
----
-
-## 🧠 Problem Solving & Algorithmic Thinking
-
-File `problem_solving_answer.pdf` berisi:
-- Identifikasi masalah saat impor CSV besar
-- Solusi desain dan rencana implementasi
-- Persiapan skalabilitas hingga jutaan data
-
----
-
-## 👥 Soft Skills & Teamwork
-
-Termasuk juga jawaban skenario mengenai:
-- Manajemen beban kerja dalam tim
-- Dukungan untuk rekan tim yang kewalahan
-- Komunikasi dengan stakeholder saat risiko keterlambatan
-
 ---
 
 ## 🚀 Cara Menjalankan
