@@ -1,61 +1,91 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📦 VhiWEB E-Procurement System - Backend Developer Test
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🧾 Deskripsi Proyek
 
-## About Laravel
+Ini adalah implementasi sistem backend sederhana untuk **E-Procurement** menggunakan **Laravel 12 & PHP 8.2**. Sistem ini mendukung fitur otentikasi, pendaftaran vendor, serta CRUD katalog produk. Selain itu, disediakan juga dokumentasi API berbasis Swagger dan solusi skenario soal algoritmik & teamwork.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🔧 Teknologi yang Digunakan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Laravel 12**
+- **PHP 8.2**
+- **Sanctum** – Autentikasi berbasis token
+- **L5-Swagger** – Dokumentasi API otomatis
+- **MySQL** – Database
+- **Laravel Queue** – Untuk proses impor CSV besar (opsional untuk pengembangan lebih lanjut)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🔐 Autentikasi
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Method | Endpoint       | Deskripsi                 |
+|--------|----------------|---------------------------|
+| POST   | /api/register  | Register user             |
+| POST   | /api/login     | Login & ambil token       |
+| GET    | /api/profile   | Ambil profil user login   |
+| POST   | /api/logout    | Logout & revoke token     |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🏢 Vendor
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Method | Endpoint       | Deskripsi                       |
+|--------|----------------|----------------------------------|
+| POST   | /api/vendors   | Daftarkan vendor (1 user = 1)   |
 
-### Premium Partners
+**Field:** `company_name`, `address`, `phone`, `npwp_number`  
+**Relasi:** `User hasOne Vendor`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🛒 Produk
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Method | Endpoint              | Deskripsi              |
+|--------|-----------------------|------------------------|
+| GET    | /api/products         | List produk vendor     |
+| POST   | /api/products         | Tambah produk          |
+| GET    | /api/products/{id}    | Detail produk          |
+| PUT    | /api/products/{id}    | Update produk          |
+| DELETE | /api/products/{id}    | Hapus produk           |
 
-## Code of Conduct
+**Field:** `name`, `price`, `stock`, `description`  
+**Relasi:** `Vendor hasMany Products`
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📄 Dokumentasi API
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Swagger dapat diakses melalui endpoint: /api/documentation
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🧠 Problem Solving & Algorithmic Thinking
+
+File `problem_solving_answer.pdf` berisi:
+- Identifikasi masalah saat impor CSV besar
+- Solusi desain dan rencana implementasi
+- Persiapan skalabilitas hingga jutaan data
+
+---
+
+## 👥 Soft Skills & Teamwork
+
+Termasuk juga jawaban skenario mengenai:
+- Manajemen beban kerja dalam tim
+- Dukungan untuk rekan tim yang kewalahan
+- Komunikasi dengan stakeholder saat risiko keterlambatan
+
+---
+
+## 🚀 Cara Menjalankan
+
+```bash
+git clone https://github.com/username/vhiweb-eprocurement.git
+cd vhiweb-eprocurement
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
