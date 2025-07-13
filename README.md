@@ -2,7 +2,7 @@
 
 ## 🧾 Deskripsi Proyek
 
-Ini adalah implementasi sistem backend sederhana untuk **E-Procurement** menggunakan **Laravel 12 & PHP 8.2**. Sistem ini mendukung fitur otentikasi, pendaftaran vendor, serta CRUD katalog produk. Selain itu, disediakan juga dokumentasi API berbasis Swagger dan solusi skenario soal algoritmik & teamwork.
+Ini adalah implementasi sistem backend sederhana untuk **E-Procurement** menggunakan **Laravel 12 & PHP 8.2**. Sistem ini mendukung fitur otentikasi, pendaftaran vendor, serta CRUD katalog produk. Selain itu, disediakan juga dokumentasi API berbasis Swagger.
 
 ---
 
